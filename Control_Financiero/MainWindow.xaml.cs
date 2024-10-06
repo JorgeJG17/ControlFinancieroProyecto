@@ -13,95 +13,68 @@ using System.Data;
 using System.Data.SQLite;
 using System.Configuration;
 using System.Data.SqlClient;
+using Control_Financiero.Bases;
 
 namespace Control_Financiero
 {
     public partial class MainWindow : Window
     {
-        private SQLiteConnection miConexionSql;
         
         public MainWindow()
         {
             InitializeComponent();
 
-            ConexionDB vConexion = new ConexionDB();
-            miConexionSql = vConexion.ObtenerConexion();
-
             VerCombos();
         }
 
-        private void VerCombos() //Ver los meses y los años en el ComboBox
-        {
+        //Ver los meses y los años en el ComboBox
+        private void VerCombos(){ //Hemos cambiado la manera de realizar la consultas, creando una clase para ello
+            //así poder reutilizar el código en un futuro
+
             string consulta = "SELECT * FROM Meses";
             string consultaAnno = "SELECT * FROM Annos";
 
-            SQLiteCommand miSqlCommand = new SQLiteCommand(consulta, miConexionSql);
-            SQLiteCommand miSqlCommandAnno = new SQLiteCommand(consultaAnno, miConexionSql);
-
-            miConexionSql.Open();
-
-            DataTable resultados = new DataTable();
-            SQLiteDataAdapter miAdaptadorSql = new SQLiteDataAdapter(miSqlCommand);
-            miAdaptadorSql.Fill(resultados);
+            //Llamamos al método de nuestra clase que hemos creado y nos devuelve directamnet el resultado de la consulta
+            DataTable r = ConsultasDB.Seleccionar(consulta);
 
             comboMes.DisplayMemberPath = "Mes";
             comboMes.SelectedValuePath = "Id";
-            comboMes.ItemsSource = resultados.DefaultView;
+            comboMes.ItemsSource = r.DefaultView;
 
-
-            DataTable resultadosAnno = new DataTable();
-            SQLiteDataAdapter miAdaptadorSqlAnno = new SQLiteDataAdapter(miSqlCommandAnno);
-            miAdaptadorSqlAnno.Fill(resultadosAnno);
+            DataTable ra = ConsultasDB.Seleccionar(consultaAnno);
 
             comboAnno.DisplayMemberPath = "Anno";
             comboAnno.SelectedValuePath = "Id";
-            comboAnno.ItemsSource = resultadosAnno.DefaultView;
-
-            miConexionSql.Close();
+            comboAnno.ItemsSource = ra.DefaultView;
         }
 
         private void ActualizarDinero()
         {
+            //Hemos realizado un cambio a la hora de realizar consultas
             string consultaAltas = "SELECT SUM(Altas) AS TotalAltas FROM Ingresos WHERE IdAnno = @idAnno AND IdMes = @idMes";
             string consultaBajas = "SELECT SUM(Bajas) AS TotalBajas FROM Gastos WHERE IdAnno = @idAnno AND IdMes = @idMes";
 
-            SQLiteCommand miSqlCommandAltas = new SQLiteCommand(consultaAltas, miConexionSql);
-            SQLiteCommand miSqlCommandBajas = new SQLiteCommand(consultaBajas, miConexionSql);
+            string[] arrayA = {"@idAnno", "@idMes"};
+            Object[] arrayO = {comboAnno.SelectedValue, comboMes.SelectedValue};
 
-            miConexionSql.Open();
+            DataTable r = ConsultasDB.Seleccionar(consultaAltas, arrayA, arrayO);
+            DataTable r2 = ConsultasDB.Seleccionar(consultaBajas, arrayA, arrayO);
 
-            miSqlCommandAltas.Parameters.AddWithValue("@idAnno", comboAnno.SelectedValue);
-            miSqlCommandAltas.Parameters.AddWithValue("@idMes", comboMes.SelectedValue);
+            try{
 
-            miSqlCommandBajas.Parameters.AddWithValue("@idAnno", comboAnno.SelectedValue);
-            miSqlCommandBajas.Parameters.AddWithValue("@idMes", comboMes.SelectedValue);
-
-            //Arreglar que el elemento id no lo encuentra
-            try 
-            { 
-                DataTable resultadosAltas = new DataTable();
-                SQLiteDataAdapter miAdaptadorSqlAltas = new SQLiteDataAdapter(miSqlCommandAltas);
-                miAdaptadorSqlAltas.Fill(resultadosAltas);
-
-                DataTable resultadosBajas = new DataTable();
-                SQLiteDataAdapter miAdaptadorSqlBajas = new SQLiteDataAdapter(miSqlCommandBajas);
-                miAdaptadorSqlBajas.Fill(resultadosBajas);
-
-                double AltasT = Convert.ToDouble(resultadosAltas.Rows[0]["TotalAltas"]);
-                double BajasT = Convert.ToDouble(resultadosBajas.Rows[0]["TotalBajas"]);
+                double AltasT = Convert.ToDouble(r.Rows[0]["TotalAltas"]);
+                double BajasT = Convert.ToDouble(r2.Rows[0]["TotalBajas"]);
 
                 dineroActual.Text = (AltasT - BajasT).ToString();
-
             }
-            catch (Exception e)
+            catch (Exception)
             {
+
                 dineroActual.Text = "0€";
             }
-
-            miConexionSql.Close();
         }
 
-        
+
         private void comboMes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(comboAnno.SelectedItem != null) 

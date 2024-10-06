@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|solutionrelative:control_financiero\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\agastos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|solutionrelative:control_financiero\\agastos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\bases\\consultasdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|solutionrelative:control_financiero\\bases\\consultasdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\aingresos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|solutionrelative:control_financiero\\aingresos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|solutionrelative:control_financiero\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\bases\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|solutionrelative:control_financiero\\bases\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83DC5D42-C7F1-458B-B7EE-20402C4BAB72}|Control_Financiero\\Control_Financiero.csproj|c:\\users\\jorge\\desktop\\programaci\u00F3n c#\\ejercicos extras\\control_financiero\\control_financiero\\agastos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,53 +54,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConsultasDB.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\Bases\\ConsultasDB.cs",
+              "RelativeDocumentMoniker": "Control_Financiero\\Bases\\ConsultasDB.cs",
+              "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\Bases\\ConsultasDB.cs",
+              "RelativeToolTip": "Control_Financiero\\Bases\\ConsultasDB.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowEEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T21:00:03.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConexionDB.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\Bases\\ConexionDB.cs",
+              "RelativeDocumentMoniker": "Control_Financiero\\Bases\\ConexionDB.cs",
+              "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\Bases\\ConexionDB.cs",
+              "RelativeToolTip": "Control_Financiero\\Bases\\ConexionDB.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T12:16:48.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Control_Financiero\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Control_Financiero\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T21:30:26.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AIngresos.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\AIngresos.xaml.cs",
               "RelativeDocumentMoniker": "Control_Financiero\\AIngresos.xaml.cs",
               "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\AIngresos.xaml.cs",
               "RelativeToolTip": "Control_Financiero\\AIngresos.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAiwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T22:16:11.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AGastos.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\AGastos.xaml.cs",
               "RelativeDocumentMoniker": "Control_Financiero\\AGastos.xaml.cs",
               "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\AGastos.xaml.cs",
               "RelativeToolTip": "Control_Financiero\\AGastos.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvyMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T22:15:37.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AGastos.xaml",
-              "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\AGastos.xaml",
-              "RelativeDocumentMoniker": "Control_Financiero\\AGastos.xaml",
-              "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\AGastos.xaml",
-              "RelativeToolTip": "Control_Financiero\\AGastos.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-05T22:15:25.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Control_Financiero\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Jorge\\Desktop\\PROGRAMACI\u00D3N C#\\Ejercicos extras\\Control_Financiero\\Control_Financiero\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Control_Financiero\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAADwv5EAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T21:30:26.263Z",
               "EditorCaption": ""
             }
           ]

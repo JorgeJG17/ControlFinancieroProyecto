@@ -12,37 +12,30 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Control_Financiero.Bases;
 
-namespace Control_Financiero{
+namespace Control_Financiero
+{
 
     public partial class AIngresos : Window{
-
-        private SQLiteConnection miConexionSql;
         public AIngresos(int idMes, int idAnno){
 
             InitializeComponent();
 
             this.idMes = idMes;
             this.idAnno = idAnno;
-
-            ConexionDB vConexion = new ConexionDB();
-            miConexionSql = vConexion.ObtenerConexion();
         }
         
         //Añadir ingreso
         private void Button_Click(object sender, RoutedEventArgs e){
 
-            miConexionSql.Open();
+            //Modificacion en realizar la consulta de insetar, he decidio poner una Array object para pasar varios tipos de datos a nuestra clase
             string consulta = "INSERT INTO Ingresos (Altas, TipoAltas, IdMes, IdAnno) VALUES (@Dinero, @Tipo, @IdMes, @IdAnno)";
-            SQLiteCommand miSqlCommand = new SQLiteCommand(consulta, miConexionSql);
+            
+            string[] arrayA = {"@Dinero", "@Tipo", "@IdMes", "@IdAnno"};
+            Object[] arrayO = {cuadroDinero.Text, cuadroTipo.Text, idMes, idAnno};
 
-            miSqlCommand.Parameters.AddWithValue("@Dinero", cuadroDinero.Text);
-            miSqlCommand.Parameters.AddWithValue("@Tipo", cuadroTipo.Text);
-            miSqlCommand.Parameters.AddWithValue("@IdMes", idMes);
-            miSqlCommand.Parameters.AddWithValue("@IdAnno", idAnno);
-
-            miSqlCommand.ExecuteNonQuery();
-            miConexionSql.Close();
+            ConsultasDB.Insertar(consulta, arrayA, arrayO);
 
             Close();
         }
